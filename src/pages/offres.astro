@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro'
+import Base from '../layout/Base.astro'
 ---
 
 <html lang="en">
@@ -10,8 +11,9 @@ import Header from '../components/Header.astro'
 		<title>Document</title>
 	</head>
 	<body>
-        <Header />
-		<h1>Offres</h1>
+		<Base titre="Accueil">
+            <h1>Offres</h1> 
+        </Base>
 	</body>
 </html>
 

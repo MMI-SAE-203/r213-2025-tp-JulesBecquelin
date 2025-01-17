@@ -1,10 +1,11 @@
 ---
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 const { titre } = Astro.props;
 ---
 
-<html lang="fr">
+<html class="bg-slate-600" lang="fr">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,8 +14,9 @@ const { titre } = Astro.props;
     </head>
     <body>
         <Header/>
-        <main>
+        <main >
             <slot />
         </main>
+        <Footer/>
     </body>
 </html>

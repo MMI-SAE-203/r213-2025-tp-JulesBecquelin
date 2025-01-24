@@ -37,11 +37,19 @@ const offres = [
 ---
 
 <div class=" flex text-white text-2xl items-center flex-col pt-6 ">
-    { offres.map((offres) => (
-        <ul>
-        <li>{offres.nomMaison}</li>
-        </ul>
+   </ul> { offres.map((offre) => (
+       <li class="p-5 bg-slate-900 pb-10 m-20 ">
+
+        <p>{offre.imgUrl}</p>  
+        <p class="text-3xl"><strong>{offre.nomMaison}</strong></p> 
+        <p><strong>Adresse :    </strong>{offre.adresse}</p>
+        <p><strong>Prix :     </strong>{offre.prix}</p>
+        <p><strong>Surface :     </strong>{offre.surface}</p>
+        <p><strong>Nombres de Salle de Bain :     </strong>{offre.nbSdb}</p>
+
+    </li>
+       
     )
         )
-    }
+    } </ul>
     </div>

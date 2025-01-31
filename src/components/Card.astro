@@ -4,14 +4,17 @@ import Offres from "../pages/offres.astro";
 const {...offre} = Astro.props;
 ---
 
-<div class=" flex text-white text-2xl items-center flex-col pt-6 ">
-   
+<div class=" flex text-white text-2xl items-center flex-col pt-6 p-5 ">
+    <div class="bg-gray-800 p-5 m-5 "><img class="w-52 h-auto"  src={offre.img} alt="">   
         <p class="text-3xl"><strong>{offre.nomMaison}</strong></p> 
+        
         <p><strong>Adresse :    </strong>{offre.adresse}</p>
         <p><strong>Prix :     </strong>{offre.prix}</p>
         <p><strong>Surface :     </strong>{offre.surface}</p>
         <p><strong>Nombres de Salle de Bain :     </strong>{offre.nbSdb}</p>
-         <img class="w-200px" src={offre.img} alt="">
-        <p><strong>     </strong>{offre.favori}</p>
+        <div class="flex items-center gap-8 my-6">
+            {offre.favori && <p>⭐️</p>}
+            <button x-on:click="favori = !favori">Favori</button>
+        </div>
 
     </div>

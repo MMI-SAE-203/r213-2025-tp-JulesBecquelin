@@ -17,6 +17,7 @@ const {...offre} = Astro.props;
             {offre.favori && <p>⭐️</p>}
             <button x-on:click="favori = !favori">Favori</button>
             <a class="bg-yellow-500 p-2 rounded-xl" href={`/offres/${offre.id}`}>Voir plus</a>
+            <a class="bg-yellow-500 p-2 rounded-xl" href={`/offres/surface/85`}>m²</a>
         </div>
 
     </div>

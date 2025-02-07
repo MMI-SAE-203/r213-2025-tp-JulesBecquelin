@@ -26,3 +26,7 @@ export async function getOffre(id) {
         return null;
     }
 }
+export async function getSurface(surface){
+    const Surfacerecords = await pb.collection('maison').getFullList( { filter : `surface>${surface}` }) ;
+    return Surfacerecords
+}

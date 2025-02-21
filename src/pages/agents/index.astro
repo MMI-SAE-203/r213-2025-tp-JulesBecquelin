@@ -1,0 +1,22 @@
+---
+import Base from "../../layout/Base.astro";
+import { allAgents } from "../../backend.mjs";
+
+const agents = await allAgents();
+---
+
+<Base>
+    <div class="flex text-white text-2xl items-center flex-col pt-6 p-5">
+        <div class="bg-gray-800 p-5 m-5 w-full max-w-4xl">
+            
+            {
+                agents?.map((agent) => (
+                    <div class="border p-4 m-2 bg-gray-700 rounded-lg">
+                       <a href={`/agents/${agent.id}`}> <h2 class="text-xl font-bold mt-2">{agent.Nom} {agent.Prenom}</h2></a>
+                        <p>{agent.Email}</p>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</Base>

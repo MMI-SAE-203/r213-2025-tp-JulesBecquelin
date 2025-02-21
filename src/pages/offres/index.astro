@@ -32,14 +32,7 @@ if (Astro.request.method === "POST") {
 }
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title> Offres</title>
-	</head>
-	<body>
+
 		<Base titre="Accueil">
             <h1 class="text-white text-6xl flex justify-center ">Offres</h1> 
 			<div x-data="{ showFavorites: false }" class="p-4">
@@ -82,9 +75,10 @@ if (Astro.request.method === "POST") {
 					Filtrer par prix
 				</button>
 			</form>
+
+			<a class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+			 href="/agents">Les agents</a>
 			
 			
         </Base>
-	</body>
-</html>
 
